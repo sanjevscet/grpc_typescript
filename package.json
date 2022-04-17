@@ -4,19 +4,23 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/google-protobuf": "^3.7.2",
-    "grpc-tools": "^1.9.1",
     "grpc_tools_node_protoc_ts": "^4.1.2",
+    "grpc-tools": "^1.9.1",
+    "nodemon": "^2.0.15",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "express": "^4.17.3",
     "grpc": "^1.24.3"
   },
   "scripts": {
     "build": "sh sh/build.sh",
     "abc": "sh sh/abc.sh",
     "server": "ts-node server/index.ts",
-    "client": "ts-node client/index.ts"
+    "client": "ts-node client/index.ts",
+    "serve": "nodemon client/express.ts"
   }
 }
